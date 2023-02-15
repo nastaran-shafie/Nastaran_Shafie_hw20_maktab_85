@@ -10,9 +10,10 @@ const petternEmail = "[^@ \t\r\n]+@[^@ \t\r\n]+.[^@ \t\r\n]+";
 const patternName = "^[a-zA-Z\u0600-\u06FFs ]+$";
 const PositionPattern = "^[a-zA-Z\u0600-\u06FFs ]+$";
 const patternNumber = "09[0-9]";
+const patternFile = " .jpg,.png,.pdf";
 //  form function----------------------------------------------------------------------------------
 function Form() {
-  const [entredResume, setEntredResum] = useState({});
+  const [Resume, setResume] = useState({});
   const dispatch = useDispatch();
   // name from use input--------------------------------------------------------------------------------
   const {
@@ -45,9 +46,11 @@ function Form() {
     (value: string) => value.match(patternNumber) && value.length === 11
   );
   // const file from useInput-------------------------------------------------------------------
+
   const fileChanging = (event: any) => {
-    const fileName = event.target.value;
-    console.log(fileName);
+    const fileName = event.target.value.split("\\").at(-1);
+
+    setResume(fileName);
   };
   // login handeler-------------------------------------------------------------------------------
   const loginHandler = (event: FormEvent) => {
@@ -63,7 +66,7 @@ function Form() {
         email: entredEmail,
         position: entredPosition,
         phone: Number(entredPhone),
-        resume: entredResume,
+        resume: Resume,
       };
       const login = true;
       dispatch(formdispatch.showUser({ user, login }));
@@ -99,7 +102,12 @@ function Form() {
           <label htmlFor="resome">فایل رزومه</label>
           <div className="fileContainer">
             {" "}
-            <Input type="file" onChange={fileChanging} id="resome" />
+            <Input
+              type="file"
+              onChange={fileChanging}
+              id="resome"
+              accept={patternFile}
+            />
           </div>
         </div>
         <div className="leftContainer">

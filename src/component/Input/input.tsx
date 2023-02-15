@@ -7,6 +7,8 @@ function Input({
   onChange,
   isValid,
   showError,
+  pattern,
+  accept,
 }: InputInterface) {
   return (
     <>
@@ -15,6 +17,8 @@ function Input({
         placeholder={placeholder}
         id={id}
         onChange={onChange}
+        pattern={pattern}
+        accept={accept}
       />
       {!isValid && <p className="error">{showError}</p>}
     </>

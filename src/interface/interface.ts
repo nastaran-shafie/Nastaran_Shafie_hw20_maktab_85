@@ -7,6 +7,8 @@ id?:string
 onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 isValid ?:boolean,
 showError ?:string,
+pattern?:string
+accept?:string
 
 }
 
