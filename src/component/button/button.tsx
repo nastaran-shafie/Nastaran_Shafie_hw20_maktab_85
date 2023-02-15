@@ -1,4 +1,4 @@
-import { buttonInterface } from "../../typs/type";
+import { buttonInterface } from "../../interface/interface";
 
 function Button({ onClick, title }: buttonInterface) {
   return <button onClick={onClick}>{title} </button>;

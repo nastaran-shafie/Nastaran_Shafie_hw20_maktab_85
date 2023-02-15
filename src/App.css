@@ -36,7 +36,7 @@ input {
 }
 .fileContainer {
   width: 21em;
-  height: 2.7em;
+  height: 2.5em;
   background-color: white;
   display: flex;
   align-items: flex-end;
@@ -58,4 +58,8 @@ button {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.error {
+  font-size: 0.875rem;
+  color: red;
 }
