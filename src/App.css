@@ -60,6 +60,35 @@ button {
   justify-content: center;
 }
 .error {
-  font-size: 0.875rem;
+  font-size: 0.7rem;
   color: red;
+}
+.profielContainer {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 2rem;
+  font-size: 1.3rem;
+}
+.profile {
+  text-align: center;
+  padding-top: 0.5rem;
+}
+span {
+  color: darkblue;
+  font-size: 1.1rem;
+}
+img {
+  width: 165px;
+  height: 165px;
+}
+.profileImg {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 6rem;
+}
+.fix {
+  position: fixed;
+  bottom: 12rem;
 }

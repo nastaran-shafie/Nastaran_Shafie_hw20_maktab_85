@@ -135,7 +135,7 @@ function Form() {
       </div>
       {/* button submit----------------------------------------------------------- */}
       <div className="buttonConatainer">
-        <Button title="ارسال درخواست" />
+        <Button title="ارسال درخواست" className="fix" />
       </div>
     </form>
   );

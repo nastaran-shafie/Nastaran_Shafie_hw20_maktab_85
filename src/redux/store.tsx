@@ -8,10 +8,7 @@ const initialState: InitialStateInterFace = {
     email: "",
     position: "",
     phone: 0,
-    resume: {
-      name: "",
-      format: "",
-    },
+    resume: "",
   },
   login: false,
 };
